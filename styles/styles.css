@@ -1,6 +1,3 @@
-html {
-  box-sizing: border-box;
-}
 @font-face {
   font-family: "PT Sans";
   src: url(../fonts/ptsans-400.woff2) format("woff2");
@@ -18,7 +15,14 @@ html {
 .visually-hidden {
   display: none;
 }
+input,
+button {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
 body {
+  box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -43,6 +47,21 @@ body {
 }
 .nav-menu-link a:hover {
   border-bottom: 2px solid rgba(117, 98, 87, 1);
+}
+.links-icon {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon-search {
+  background-image: url(../images/search.svg);
+  width: 44px;
+  height: 64px;
+}
+.icon-favorites {
+  background-image: url(../images/favorites.svg);
+  width: 44px;
+  height: 64px;
 }
 .btn {
   text-decoration: none;
@@ -97,7 +116,7 @@ ul {
   padding-bottom: 112px;
 }
 
-.list-elem h3 {
+.list-header {
   margin: 0 auto;
   width: 175px;
   text-transform: uppercase;
@@ -114,16 +133,16 @@ ul {
   font-size: 18px;
   line-height: 21px;
 }
-.blue {
+.dark {
   padding-top: 102px;
   padding-bottom: 102px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(130, 179, 211, 1);
 }
-.blue p {
+.dark p {
   color: inherit;
 }
-.grey {
+.light {
   background-color: rgba(131, 179, 211, 0.2);
 }
 .container-advice {
@@ -146,7 +165,7 @@ ul {
 .list-elem img {
   margin-bottom: 30px;
 }
-.wrapper-advice-search p {
+.wrapper-advice-search-header {
   margin-bottom: 54px;
 }
 .search-hotel {
@@ -194,11 +213,31 @@ article p {
 .footer-company-info-container {
   padding: 40px 70px;
 }
+.icon-vk {
+  background-image: url(../images/footer-logo-vk.svg);
+  width: 24px;
+  height: 14px;
+}
+.icon-telegram {
+  background-image: url(../images/footer-logo-telegram.svg);
+  width: 18px;
+  height: 16px;
+}
+.icon-youtube {
+  background-image: url(../images/footer-logo-youtube.svg);
+  width: 22px;
+  height: 17px;
+}
 .footer-number {
   font-size: 40px;
   line-height: 40px;
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
+}
+.icon-htmlacademy {
+  background-image: url(../images/footer-logo-htmlacademy.svg);
+  width: 115px;
+  height: 33px;
 }
 
 /* CATALOG */
@@ -299,12 +338,29 @@ article p {
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
 }
-
-.show-change-button {
-  padding: 17px;
+.display-change-item {
+  display: inline-block;
   background-color: rgba(255, 255, 255, 1);
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
+}
+.show-change-button {
+  width: 16px;
+  height: 14px;
+  margin: 17px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+.button-1 {
+  background-image: url(../images/view-icon-1.svg);
+}
+.button-2 {
+  background-image: url(../images/view-icon-2.svg);
+}
+.button-3 {
+  background-image: url(../images/view-icon-3.svg);
 }
 .hotel {
   width: 300px;
