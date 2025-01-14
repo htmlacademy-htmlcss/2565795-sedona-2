@@ -15,28 +15,34 @@
             height="70"
             alt="Логотип Sedona"
           />
-          <ul>
-            <li class="nav-menu-link"><a href="index.html">Главная</a></li>
-            <li class="nav-menu-link">
-              <a href="index.html#reasons_visit">О Седоне</a>
+          <ul class="nav-menu-links">
+            <li class="nav-menu-link-item">
+              <a href="index.html" class="nav-menu-link">Главная</a>
             </li>
-            <li class="nav-menu-link"><a href="catalog.html">Гостиницы</a></li>
+            <li class="nav-menu-link-item">
+              <a href="index.html#reasons_visit" class="nav-menu-link"
+                >О Седоне</a
+              >
+            </li>
+            <li class="nav-menu-link-item">
+              <a href="catalog.html" class="nav-menu-link">Гостиницы</a>
+            </li>
           </ul>
         </nav>
         <div class="others-links-header">
-          <ul>
+          <ul class="others-links-header-list">
             <li>
               <a href="#" class="links-icon icon-search"></a>
             </li>
             <li>
               <a href="#" class="links-icon icon-favorites"></a>
             </li>
-            <li><a href="#" class="btn want-here">ХОЧУ СЮДА!</a></li>
           </ul>
+          <button class="btn want-here">ХОЧУ СЮДА!</button>
         </div>
       </div>
     </header>
-    <main>
+    <main class="main-container">
       <section id="welcome">
         <h1 class="visually-hidden">Седона</h1>
         <div class="container-welcome-image">
@@ -57,14 +63,14 @@
       <section id="reasons_visit">
         <div class="container-sedona-info">
           <h2 class="visually-hidden">Причины посетить Седону</h2>
-          <ul>
-            <li class="list-elem dark">
-              <h3 class="list-header">Настоящий городок</h3>
-              <p class="list-elem-text">
+          <ul class="list-reasons">
+            <li class="list-reason-item dark">
+              <h3 class="list-reason-header">Настоящий городок</h3>
+              <p class="list-reason-item-text">
                 Седона — не аттракцион для туристов, там течёт своя жизнь
               </p>
             </li>
-            <li>
+            <li class="list-reason-item reason-image">
               <img
                 src="images/advantage-photo-1.jpg"
                 width="800"
@@ -72,25 +78,25 @@
                 alt="Фотография города Седона"
               />
             </li>
-            <li class="list-elem">
-              <h3 class="list-header">Небольшая площадь</h3>
-              <p class="list-elem-text">
+            <li class="list-reason-item">
+              <h3 class="list-reason-header">Небольшая площадь</h3>
+              <p class="list-reason-item-text">
                 Все достопримечательности находятся очень близко
               </p>
             </li>
-            <li class="list-elem light">
-              <h3 class="list-header">Красивая дорога</h3>
-              <p class="list-elem-text">
+            <li class="list-reason-item light">
+              <h3 class="list-reason-header">Красивая дорога</h3>
+              <p class="list-reason-item-text">
                 Ехать в Седону из Лас-Вегаса совсем не скучно!
               </p>
             </li>
-            <li class="list-elem">
-              <h3 class="list-header">Мало туристов</h3>
-              <p class="list-elem-text">
+            <li class="list-reason-item">
+              <h3 class="list-reason-header">Мало туристов</h3>
+              <p class="list-reason-item-text">
                 Большинство едет в Гранд Каньон и толпится там
               </p>
             </li>
-            <li>
+            <li class="list-reason-item reason-image">
               <img
                 src="images/advantage-photo-2.jpg"
                 width="800"
@@ -98,9 +104,9 @@
                 alt="Фотография города Седона"
               />
             </li>
-            <li class="list-elem dark">
-              <h3 class="list-header">Там есть мост дьявола</h3>
-              <p class="list-elem-text">
+            <li class="list-reason-item dark">
+              <h3 class="list-reason-header">Там есть мост дьявола</h3>
+              <p class="list-reason-item-text">
                 Да, по нему можно пройти! Если вы осмелитесь, разумеется
               </p>
             </li>
@@ -113,71 +119,89 @@
             <h2 class="advice-header">
               Приезжайте в Седону отдохнуть в комфорте и уюте!
             </h2>
-            <p>Опытный персонал и качественное обслуживание!</p>
-          </div>
-          <div class="wrapper-advice-list">
-            <ul>
-              <li class="advice-list list-elem grey">
-                <img
-                  src="images/home.svg"
-                  width="75"
-                  height="72"
-                  alt="логотип дома"
-                />
-                <h3 class="list-header">Жилье</h3>
-                <p class="list-elem-text">
-                  Рекомендуем пожить<br />
-                  в настоящем мотеле,<br />
-                  всё как в кино!
-                </p>
-              </li>
-              <li class="advice-list list-elem">
-                <img
-                  src="images/food.svg"
-                  width="74"
-                  height="70"
-                  alt="логотип еды"
-                />
-                <h3 class="list-header">Еда</h3>
-                <p class="list-elem-text">
-                  Всегда заказывайте<br />
-                  топовый фирменный бургер,<br />
-                  вы не разочаруетесь!
-                </p>
-              </li>
-              <li class="advice-list list-elem grey">
-                <img
-                  src="images/souvenir.svg"
-                  width="64"
-                  height="76"
-                  alt="логотип сувенира"
-                />
-                <h3 class="list-header">Сувениры</h3>
-                <p class="list-elem-text">
-                  Не только китайского,<br />
-                  но и настоящего местного<br />
-                  производства!
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="wrapper-advice-search">
-            <h2 class="wrapper-advice-search-header">Заинтересовались?</h2>
-            <p>
-              Укажите предполагаемые даты поездки,<br />
-              и мы покажем вам лучшие предложения гостиниц в Седоне
+            <p class="advice-text">
+              Опытный персонал и качественное обслуживание!
             </p>
-            <a class="btn search-hotel" href="catalog.html#filter-hotels"
-              >ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a
-            >
           </div>
+          <ul class="advice-list">
+            <li class="advice-item light">
+              <img
+                src="images/home.svg"
+                width="75"
+                height="72"
+                alt="логотип дома"
+              />
+              <h3 class="advice-item-header">Жилье</h3>
+              <p class="advice-item-text">
+                Рекомендуем пожить<br />
+                в настоящем мотеле,<br />
+                всё как в кино!
+              </p>
+            </li>
+            <li class="advice-item">
+              <img
+                src="images/food.svg"
+                width="74"
+                height="70"
+                alt="логотип еды"
+              />
+              <h3 class="advice-item-header">Еда</h3>
+              <p class="advice-item-text">
+                Всегда заказывайте<br />
+                топовый фирменный бургер,<br />
+                вы не разочаруетесь!
+              </p>
+            </li>
+            <li class="advice-item light">
+              <img
+                src="images/souvenir.svg"
+                width="64"
+                height="76"
+                alt="логотип сувенира"
+              />
+              <h3 class="advice-item-header">Сувениры</h3>
+              <p class="advice-item-text">
+                Не только китайского,<br />
+                но и настоящего местного<br />
+                производства!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="hotel-search">
+        <div class="container-hotel-search">
+          <h2 class="hotel-search-header">Заинтересовались?</h2>
+          <p class="hotel-search-text">
+            Укажите предполагаемые даты поездки,<br />
+            и мы покажем вам лучшие предложения гостиниц в Седоне
+          </p>
+          <button class="btn search-hotel">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
         </div>
       </section>
     </main>
     <footer>
+      <section id="footer-subscription">
+        <div class="container-footer-subscription">
+          <article class="subscription-article">
+            <h2 class="subscription-header">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
+            <p class="subscription-text">
+              Только полезная информация и никакого спама,<br />
+              честное бойскаутское!
+            </p>
+            <input
+              type="email"
+              name="subscriber-email"
+              class="subscribe-input input-color"
+              placeholder="Ваш e-mail"
+            />
+            <input type="submit" class="subscribe-btn" value="ПОДПИСАТЬСЯ" />
+          </article>
+        </div>
+      </section>
       <section id="footer-company-info">
         <div class="footer-company-info-container">
-          <ul>
+          <ul class="social-networks">
             <li>
               <a href="#" class="links-icon icon-vk" title="Ссылка на vk"></a>
             </li>
