@@ -16,44 +16,40 @@
             height="70"
             alt="Логотип Sedona"
           />
-          <ul>
-            <li class="nav-menu-link"><a href="index.html">Главная</a></li>
-            <li class="nav-menu-link">
-              <a href="index.html#reasons_visit">О Седоне</a>
+          <ul class="nav-menu-links">
+            <li class="nav-menu-link-item">
+              <a href="index.html" class="nav-menu-link">Главная</a>
             </li>
-            <li class="nav-menu-link"><a href="catalog.html">Гостиницы</a></li>
+            <li class="nav-menu-link-item">
+              <a href="index.html#reasons_visit" class="nav-menu-link"
+                >О Седоне</a
+              >
+            </li>
+            <li class="nav-menu-link-item">
+              <a href="catalog.html" class="nav-menu-link">Гостиницы</a>
+            </li>
           </ul>
         </nav>
         <div class="others-links-header">
-          <ul>
+          <ul class="others-links-header-list">
             <li>
               <a href="#" class="links-icon icon-search"></a>
             </li>
             <li>
               <a href="#" class="links-icon icon-favorites"></a>
             </li>
-            <li><a href="#" class="btn want-here">ХОЧУ СЮДА!</a></li>
           </ul>
+          <button class="btn want-here">ХОЧУ СЮДА!</button>
         </div>
       </div>
     </header>
-    <main>
+    <main class="main-container">
       <section id="filter-hotels">
         <div class="container-filter-hotels">
           <h1 class="catalog-header">Гостиницы Седоны</h1>
           <div class="icons-breadcrumbs">
-            <img
-              src="images/icons-home.svg"
-              width="12"
-              height="12"
-              alt="Иконка возврата на главную"
-            />
-            <img
-              src="images/icons-breadcrumbs.svg"
-              width="6.39"
-              height="10"
-              alt="Хлебные крошки"
-            />
+            <a class="breadcrumbs-home" href="#"></a>
+            <a class="breadcrumbs-arrow" href=""></a>
             <span>Гостиницы</span>
           </div>
           <form
@@ -62,7 +58,7 @@
             class="all-form"
           >
             <div class="infrastructure-form">
-              <span class="form-title">Инфраструктура:</span>
+              <span class="form-header">Инфраструктура:</span>
               <label>
                 <input type="checkbox" name="pool" id="pool" />Бассейн
               </label>
@@ -74,7 +70,7 @@
               </label>
             </div>
             <div class="housing-form">
-              <span class="form-title">Тип Жилья:</span>
+              <span class="form-header">Тип Жилья:</span>
               <label>
                 <input
                   type="radio"
@@ -103,25 +99,29 @@
               </label>
             </div>
             <div class="price-form">
-              <span class="form-title">Стоимость, ₽:</span>
-              <input type="text" name="price-1" value="0" />
-              <input type="text" name="price-2" value="9000" />
+              <span class="form-header">Стоимость, ₽:</span>
+              <input type="text" name="price-1" value="0" class="input-1" />
+              <input type="text" name="price-2" value="9000" class="input-2" />
               <button></button>
             </div>
-            <input
-              type="submit"
-              value="Применить"
-              class="infrastructure-form-btn"
-            />
-            <button class="infrastructure-form-btn reset">Сбросить</button>
+            <div class="btns-form">
+              <input
+                type="submit"
+                value="Применить"
+                class="infrastructure-form-btn"
+              />
+              <button class="infrastructure-form-btn reset">Сбросить</button>
+            </div>
           </form>
         </div>
       </section>
       <section id="result-search">
-        <div class="container-result-search">
-          <div class="filter-search-wrapper">
+        <div class="container-filter-search">
+          <div class="filter-search-text">
             <h2 class="visually-hidden">Результаты поиска</h2>
             <span class="search-header">Найдено гостиниц: 38</span>
+          </div>
+          <div class="filter-search-activity">
             <form action="https://echo.htmlacademy.ru/" method="get">
               <select
                 name="filter-price"
@@ -143,133 +143,128 @@
               </li>
             </ul>
           </div>
-          <div class="list-hotels-wrapper">
-            <ul>
-              <li class="hotel">
-                <img
-                  src="images/hotel-1.jpg"
-                  width="300"
-                  height="212"
-                  alt="Фото гостиницы"
-                />
+        </div>
+        <div class="list-hotels-wrapper">
+          <ul class="list-hotels">
+            <li class="hotel">
+              <img
+                src="images/hotel-1.jpg"
+                width="300"
+                height="212"
+                alt="Фото гостиницы"
+              />
+              <div class="hotel-item-text">
                 <h3 class="title-hotel">Amara Resort & Spa</h3>
-                <div class="text-hotel">
-                  <span>Гостиница</span>
-                  <span>От 4000 ₽</span>
-                </div>
+                <span>Гостиница</span>
+                <span>От 4000 ₽</span>
                 <button class="detail-btn">ПОДРОБНЕЕ</button>
                 <button class="add-favorite-btn">В ИЗБРАННОЕ</button>
-                <img
-                  src="images/stars-4.svg"
-                  width="140"
-                  height="37"
-                  alt="Количество звезд у гостиницы : 4"
-                />
-                <span class="rating">Рейтинг: 8,5</span>
-              </li>
-              <li class="hotel">
-                <img
-                  src="images/hotel-2.jpg"
-                  width="300"
-                  height="212"
-                  alt="Фото гостиницы"
-                />
-                <h3 class="title-hotel">Villas at Poco Diablo</h3>
-                <div class="text-hotel">
-                  <span class="housing-class">Гостиница</span>
-                  <span class="price">От 5000 ₽</span>
+                <div class="stars">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
                 </div>
+                <span class="rating">Рейтинг: 8,5</span>
+              </div>
+            </li>
+            <li class="hotel">
+              <img
+                src="images/hotel-2.jpg"
+                width="300"
+                height="212"
+                alt="Фото гостиницы"
+              />
+              <div class="hotel-item-text">
+                <h3 class="title-hotel">Villas at Poco Diablo</h3>
+                <span class="housing-class">Гостиница</span>
+                <span class="price">От 5000 ₽</span>
                 <button class="detail-btn">ПОДРОБНЕЕ</button>
                 <button class="add-favorite-btn">В ИЗБРАННОМ</button>
-                <img
-                  src="images/stars-4.svg"
-                  width="140"
-                  height="37"
-                  alt="Количество звезд у гостиницы : 4"
-                />
+                <div class="stars">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                </div>
                 <span class="rating">Рейтинг: 9,2</span>
-              </li>
-              <li class="hotel">
-                <img
-                  src="images/hotel-3.jpg"
-                  width="300"
-                  height="212"
-                  alt="Фото гостиницы"
-                />
+              </div>
+            </li>
+            <li class="hotel">
+              <img
+                src="images/hotel-3.jpg"
+                width="300"
+                height="212"
+                alt="Фото гостиницы"
+              />
+              <div class="hotel-item-text">
                 <h3 class="title-hotel">Desert Quail Inn</h3>
-                <div class="text-hotel">
-                  <span class="housing-class">Гостиница</span>
-                  <span class="price">От 2500 ₽</span>
-                </div>
+                <span class="housing-class">Гостиница</span>
+                <span class="price">От 2500 ₽</span>
                 <button class="detail-btn">ПОДРОБНЕЕ</button>
                 <button class="add-favorite-btn">В ИЗБРАННОЕ</button>
-                <img
-                  src="images/stars-3.svg"
-                  width="140"
-                  height="37"
-                  alt="Количество звезд у гостиницы : 3"
-                />
+                <div class="stars">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                </div>
                 <span class="rating">Рейтинг: 6,9</span>
-              </li>
-              <li class="hotel">
-                <img
-                  src="images/hotel-4.jpg"
-                  width="300"
-                  height="212"
-                  alt="Фото гостиницы"
-                />
+              </div>
+            </li>
+            <li class="hotel">
+              <img
+                src="images/hotel-4.jpg"
+                width="300"
+                height="212"
+                alt="Фото гостиницы"
+              />
+              <div class="hotel-item-text">
                 <h3 class="title-hotel">GreenTree Inn</h3>
-                <div class="text-hotel">
-                  <span class="housing-class">Гостиница</span>
-                  <span class="price">От 1500 ₽</span>
-                </div>
+                <span class="housing-class">Гостиница</span>
+                <span class="price">От 1500 ₽</span>
                 <button class="detail-btn">ПОДРОБНЕЕ</button>
                 <button class="add-favorite-btn">В ИЗБРАННОЕ</button>
-                <img
-                  src="images/stars-2.svg"
-                  width="140"
-                  height="37"
-                  alt="Количество звезд у гостиницы : 2"
-                />
+                <div class="stars">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                </div>
                 <span class="rating">Рейтинг: 5,0</span>
-              </li>
-            </ul>
-          </div>
-          <ul class="pages-list">
-            <li class="page"><span>1</span></li>
-            <li class="page"><a href="#">2</a></li>
-            <li class="page"><a href="#">3</a></li>
-            <li class="page"><a href="#">4</a></li>
-            <li class="page"><span>...</span></li>
-            <li class="page"><a href="#">10</a></li>
+              </div>
+            </li>
           </ul>
         </div>
+        <ul class="pages-list">
+          <li class="page"><span>1</span></li>
+          <li class="page"><a href="#">2</a></li>
+          <li class="page"><a href="#">3</a></li>
+          <li class="page"><a href="#">4</a></li>
+          <li class="page"><span>...</span></li>
+          <li class="page"><a href="#">10</a></li>
+        </ul>
       </section>
     </main>
     <footer>
       <section id="footer-subscription">
         <div class="container-footer-subscription footer-catalog">
-          <div class="footer-subscription-wrapper">
-            <article>
-              <h2>ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
-              <p>
-                Только полезная информация и никакого спама,<br />
-                честное бойскаутское!
-              </p>
-              <input
-                type="email"
-                name="subscriber-email"
-                class="subscribe-input input-color"
-                placeholder="Ваш e-mail"
-              />
-              <input type="submit" class="subscribe-btn" value="ПОДПИСАТЬСЯ" />
-            </article>
-          </div>
+          <article class="subscription-article">
+            <h2 class="subscription-header">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
+            <p class="subscription-text">
+              Только полезная информация и никакого спама,<br />
+              честное бойскаутское!
+            </p>
+            <input
+              type="email"
+              name="subscriber-email"
+              class="subscribe-input input-color"
+              placeholder="Ваш e-mail"
+            />
+            <input type="submit" class="subscribe-btn" value="ПОДПИСАТЬСЯ" />
+          </article>
         </div>
       </section>
       <section id="footer-company-info">
         <div class="footer-company-info-container">
-          <ul>
+          <ul class="social-networks">
             <li>
               <a href="#" class="links-icon icon-vk" title="Ссылка на vk"></a>
             </li>
