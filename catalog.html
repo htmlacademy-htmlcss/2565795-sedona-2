@@ -58,7 +58,7 @@
             class="all-form"
           >
             <div class="infrastructure-form">
-              <span class="form-header">Инфраструктура:</span>
+              <legend class="form-header">Инфраструктура:</legend>
               <label>
                 <input type="checkbox" name="pool" id="pool" />Бассейн
               </label>
@@ -70,7 +70,7 @@
               </label>
             </div>
             <div class="housing-form">
-              <span class="form-header">Тип Жилья:</span>
+              <legend class="form-header">Тип Жилья:</legend>
               <label>
                 <input
                   type="radio"
@@ -99,9 +99,14 @@
               </label>
             </div>
             <div class="price-form">
-              <span class="form-header">Стоимость, ₽:</span>
-              <input type="text" name="price-1" value="0" class="input-1" />
-              <input type="text" name="price-2" value="9000" class="input-2" />
+              <legend class="form-header">Стоимость, ₽:</legend>
+              <input type="number" name="price-1" value="0" class="input-1" />
+              <input
+                type="number"
+                name="price-2"
+                value="9000"
+                class="input-2"
+              />
               <button></button>
             </div>
             <div class="btns-form">
@@ -110,7 +115,11 @@
                 value="Применить"
                 class="infrastructure-form-btn"
               />
-              <button class="infrastructure-form-btn reset">Сбросить</button>
+              <input
+                type="reset"
+                value="Сбросить"
+                class="infrastructure-form-btn reset"
+              />
             </div>
           </form>
         </div>
