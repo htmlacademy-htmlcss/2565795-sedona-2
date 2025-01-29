@@ -14,7 +14,14 @@
   font-display: swap;
 }
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 ul {
   list-style: none;
@@ -30,7 +37,9 @@ button,
 span,
 section,
 p,
-div {
+div,
+fieldset,
+input {
   margin: 0;
   padding: 0;
 }
@@ -59,6 +68,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   list-style: none;
+  overflow-wrap: break-word;
 }
 .main-container {
   flex-grow: 1;
@@ -74,8 +84,18 @@ body {
 .nav-menu-header {
   display: flex;
 }
+.logo-sedona {
+  display: block;
+  background-image: url(/images/logo-sedona.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 140px;
+  height: 70px;
+}
 .nav-menu-links {
   display: flex;
+  flex-wrap: wrap;
   width: 507px;
 }
 .nav-menu-link {
@@ -90,12 +110,12 @@ body {
 }
 .others-links-header {
   display: flex;
-  width: 268px;
   justify-content: space-between;
+  align-items: center;
 }
 .others-links-header-list {
   display: flex;
-  max-width: 80px;
+  margin-right: 20px;
 }
 .btn {
   background-color: rgba(117, 97, 87, 1);
@@ -111,47 +131,45 @@ body {
   line-height: 20px;
 }
 .links-icon {
-  display: inline-block;
+  display: block;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 44px;
+  height: 64px;
 }
 .icon-search {
   background-image: url(../images/search.svg);
-  width: 44px;
-  height: 64px;
 }
 .icon-favorites {
   background-image: url(../images/favorites.svg);
-  width: 44px;
-  height: 64px;
 }
 
 /* WELCOME */
+
 .container-welcome-image {
   background: aliceblue url(../images/mountains-background.jpg) no-repeat center;
   height: 485px;
-  margin-bottom: 69px;
 }
 .container-welcome-image img {
   display: block;
   margin: 0 auto;
   padding-top: 51px;
 }
-.container-welcome-text {
+/* acquaintance */
+
+.container-acquaintance {
   text-align: center;
-  margin-bottom: 90px;
+  padding-top: 69px;
+  padding-bottom: 69px;
   color: rgba(51, 51, 51, 1);
 }
-.welcome-header {
+.acquaintance-header {
   margin: 0 auto;
   width: 620px;
   margin-bottom: 25px;
   text-transform: uppercase;
   font-size: 30px;
   line-height: 36px;
-}
-.container-sedona-info {
-  margin-bottom: 64px;
 }
 
 /* REASONS */
@@ -162,6 +180,8 @@ body {
   flex-wrap: wrap;
 }
 .list-reason-item {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 400px;
   text-align: center;
   padding-top: 112px;
@@ -188,7 +208,6 @@ body {
 .reason-image {
   display: block;
   height: 385px;
-  flex: 0 0 800px;
   padding: 0;
 }
 .dark {
@@ -203,7 +222,24 @@ body {
 .light {
   background-color: rgba(131, 179, 211, 0.2);
 }
-
+/* invite */
+.invite-container {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.invite-header {
+  text-align: center;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0 auto;
+  width: 505px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.invite-text {
+  text-align: center;
+  color: rgba(51, 51, 51, 1);
+}
 /* ADVICE */
 
 .container-advice {
@@ -212,22 +248,11 @@ body {
 .wrapper-advice-text {
   margin-bottom: 64px;
 }
-.advice-header {
-  font-size: 30px;
-  line-height: 36px;
-  margin: 0 auto;
-  width: 505px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.advice-text {
-  color: rgba(51, 51, 51, 1);
-}
 
 .advice-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .advice-item {
   width: 230px;
@@ -246,7 +271,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* ADVICE-SEARCH */
+/* HOTEL-SEARCH */
 .container-hotel-search {
   padding-top: 96px;
   padding-bottom: 96px;
@@ -290,6 +315,10 @@ body {
 .subscription-text {
   margin-bottom: 54px;
 }
+.subscription-inputs {
+  display: flex;
+  justify-content: center;
+}
 .subscribe-input {
   width: 452px;
   border-top-left-radius: 4px;
@@ -319,12 +348,18 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .social-networks {
-  width: 142px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.footer-links-icon {
+  padding: 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
 }
 .icon-vk {
   background-image: url(../images/footer-logo-vk.svg);
@@ -355,12 +390,16 @@ body {
 
 /* CATALOG PAGE */
 
+/* FILTER-HOTELS */
+
+fieldset {
+  border: none;
+}
+
 .container-filter-hotels {
-  position: relative;
   color: rgba(255, 255, 255, 1);
   background: black url(../images/background-filter.png) no-repeat;
   background-size: cover;
-  margin-bottom: 50px;
   padding: 35px 70px 70px;
 }
 .catalog-header {
@@ -370,73 +409,92 @@ body {
   margin-bottom: 8px;
 }
 .icons-breadcrumbs {
-  width: 114px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
 }
 
-.breadcrumbs-home {
+.breadcrumbs-link {
   display: block;
-  background-image: url(../images/icons-home.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 13px;
   height: 15px;
+  margin-right: 10.5px;
 }
-.breadcrumbs-arrow {
-  display: block;
-  background-image: url(../images/icons-breadcrumbs.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 8px;
-  height: 15px;
+.link-home {
+  background-image: url(../images/icons-home.svg);
 }
 
-.form-header {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-}
 .all-form {
   display: flex;
   flex-direction: row;
   font-size: 18px;
   line-height: 23px;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form-header {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 .infrastructure-form {
   display: flex;
   flex-direction: column;
   width: 150px;
 }
+.infrastructure-form label {
+  margin-bottom: 16px;
+}
 .housing-form {
   display: flex;
   flex-direction: column;
   width: 150px;
 }
+.housing-form label {
+  margin-bottom: 16px;
+}
 .price-form {
   display: flex;
   flex-direction: row;
-  width: 288px;
   flex-wrap: wrap;
+  width: 288px;
 }
-.price-form button {
-  width: 287px;
+.price-form-input {
+  box-sizing: border-box;
+  width: 143px;
+  border: none;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .input-1 {
-  width: 143px;
+  margin-right: 2px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 .input-2 {
-  width: 143px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.range {
+  width: 100%;
 }
 .btns-form {
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 191px;
 }
 .infrastructure-form-btn {
@@ -450,18 +508,18 @@ body {
   color: rgba(255, 255, 255, 1);
 }
 .reset {
+  margin-top: auto;
   background-color: rgba(130, 179, 211, 0);
 }
-
-/* RESULT-SEARCH */
-
+/* FILTER-SEARCH */
 .container-filter-search {
   max-width: 1060px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  margin-bottom: 40px;
   justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 .filter-search-text {
   width: 50%;
@@ -476,29 +534,38 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  align-self: center;
 }
+
 .filter-price-range {
   font-size: 18px;
   line-height: 21px;
   color: rgba(51, 51, 51, 1);
   width: 292px;
+  max-height: 49px;
   padding: 14px 0 14px 20px;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
 }
+.display-change-items {
+  display: flex;
+  gap: 8px;
+}
 .display-change-item {
-  display: inline-block;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  box-sizing: border-box;
   background-color: rgba(255, 255, 255, 1);
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
 }
 .show-change-button {
+  align-self: center;
+  margin: 0 auto;
+  display: block;
   width: 16px;
   height: 14px;
-  margin: 17px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   border: none;
 }
 .button-1 {
@@ -513,7 +580,7 @@ body {
 
 /* LIST-HOTELS */
 
-.list-hotels-wrapper {
+.container-list-hotels {
   width: 1060px;
   margin: 0 auto;
   margin-bottom: 80px;
@@ -525,33 +592,39 @@ body {
   gap: 20px;
 }
 .hotel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 300px;
   padding: 19px;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 4px;
 }
+.hotel-foto {
+  margin-bottom: 16px;
+}
 .title-hotel {
   font-size: 24px;
   line-height: 28px;
   width: 300px;
+  margin-bottom: 16px;
 }
 .housing-class {
-  width: 140px;
-}
-.price {
-  width: 140px;
-}
-.hotel-item-text {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 20px;
-}
-.text-hotel {
   font-size: 18px;
   line-height: 21px;
   color: rgba(51, 51, 51, 1);
+  width: 140px;
 }
-.detail-btn {
+.price {
+  text-align: end;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 1);
+  width: 140px;
+}
+.button-hotel {
+  margin-top: 16px;
   width: 140px;
   font-size: 16px;
   line-height: 20px;
@@ -560,17 +633,12 @@ body {
   padding: 8px 26px;
   border-radius: 4px;
   border: none;
+}
+.detail-btn {
   background-color: rgba(117, 97, 87, 1);
 }
 .add-favorite-btn {
-  width: 140px;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 1);
   padding: 8px 20px;
-  border-radius: 4px;
-  border: none;
   background-color: rgba(130, 179, 211, 1);
 }
 .hotel:nth-child(2) button:nth-of-type(2) {
@@ -578,6 +646,11 @@ body {
   padding: 8px 18px;
 }
 .stars {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   width: 140px;
 }
 .star {
@@ -589,7 +662,11 @@ body {
   width: 18px;
   height: 17px;
 }
+.star:not(:last-child) {
+  margin-right: 6px;
+}
 .rating {
+  margin-top: 16px;
   color: rgba(51, 51, 51, 1);
   text-transform: uppercase;
   font-size: 16px;
@@ -603,6 +680,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 60px;
 }
