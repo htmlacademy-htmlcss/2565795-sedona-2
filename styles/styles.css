@@ -541,7 +541,6 @@ fieldset {
 }
 
 .container-filter-hotels {
-  margin-top: -2px;
   color: rgba(255, 255, 255, 1);
   background: black url(../images/background-filter.png) no-repeat;
   background-size: cover;
