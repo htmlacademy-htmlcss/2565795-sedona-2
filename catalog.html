@@ -53,79 +53,137 @@
           >
             <fieldset class="infrastructure-form">
               <legend class="form-header">Инфраструктура:</legend>
-              <label>
-                <input type="checkbox" name="pool" id="pool" />Бассейн
-              </label>
-              <label>
-                <input type="checkbox" name="parking" id="parking" />Парковка
-              </label>
-              <label>
-                <input type="checkbox" name="wifi" id="wifi" />Wi-Fi
-              </label>
+              <ul class="infrastructure-form-items">
+                <li class="infrastructure-form-item">
+                  <label class="control">
+                    <input
+                      type="checkbox"
+                      name="pool"
+                      id="pool"
+                      class="visually-hidden control-input"
+                    />
+                    <span class="control-mark"></span>
+                    <span>Бассейн</span>
+                  </label>
+                </li>
+                <li class="infrastructure-form-item">
+                  <label class="control">
+                    <input
+                      type="checkbox"
+                      name="parking"
+                      id="parking"
+                      class="visually-hidden control-input"
+                    />
+                    <span class="control-mark"></span>
+                    <span>Парковка</span>
+                  </label>
+                </li>
+                <li class="infrastructure-form-item">
+                  <label class="control">
+                    <input
+                      type="checkbox"
+                      name="wifi"
+                      id="wifi"
+                      class="visually-hidden control-input"
+                    />
+                    <span class="control-mark"></span>
+                    <span>Wi-Fi</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="housing-form">
               <legend class="form-header">Тип Жилья:</legend>
-              <label>
-                <input
-                  type="radio"
-                  name="housing"
-                  id="hotel"
-                  value="hotel"
-                  checked
-                />
-                Гостиница
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="housing"
-                  id="motel"
-                  value="motel"
-                />Мотель
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="housing"
-                  id="apartments"
-                  value="apartments"
-                />Апартаменты
-              </label>
+              <ul class="housing-form-items">
+                <li class="housing-form-item">
+                  <label class="control">
+                    <input
+                      type="radio"
+                      name="housing"
+                      id="hotel"
+                      value="hotel"
+                      class="visually-hidden control-input"
+                      checked
+                    />
+                    <span class="control-mark"></span>
+                    <span>Гостиница</span>
+                  </label>
+                </li>
+                <li class="housing-form-item">
+                  <label class="control">
+                    <input
+                      type="radio"
+                      name="housing"
+                      id="motel"
+                      value="motel"
+                      class="visually-hidden control-input"
+                    />
+                    <span class="control-mark"></span>
+                    <span>Мотель</span>
+                  </label>
+                </li>
+                <li class="housing-form-item">
+                  <label class="control">
+                    <input
+                      type="radio"
+                      name="housing"
+                      id="apartments"
+                      value="apartments"
+                      class="visually-hidden control-input"
+                    />
+                    <span class="control-mark"></span>
+                    <span>Апартаменты</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="price-form">
               <legend class="form-header">Стоимость, ₽:</legend>
-              <input
-                type="number"
-                name="price-1"
-                value="0"
-                class="price-form-input input-1"
-              />
-              <input
-                type="number"
-                name="price-2"
-                value="9000"
-                class="price-form-input input-2"
-              />
-              <input
-                type="range"
-                class="range"
-                min="0"
-                max="9000"
-                step="100"
-                value="100"
-              />
+              <div class="range-inputs">
+                <label class="range-input input-min">
+                  <input
+                    type="number"
+                    name="price-1"
+                    value="0"
+                    class="field price-form-input input-1"
+                  /><span>от</span></label
+                >
+                <label class="range-input input-max">
+                  <input
+                    type="number"
+                    name="price-2"
+                    value="9000"
+                    class="field price-form-input input-2"
+                  /><span>до</span></label
+                >
+              </div>
+              <div class="range-scale">
+                <div class="range-bar" style="left: 30px; width: 190px">
+                  <button
+                    type="button"
+                    class="range-toggle toggle-min"
+                  ></button>
+                  <button
+                    type="button"
+                    class="range-toggle toggle-max"
+                  ></button>
+                </div>
+              </div>
             </fieldset>
-            <div class="btns-form">
-              <button type="submit" class="btn btn-infrastructure-form blue">
-                ПРИМЕНИТЬ
-              </button>
-              <button
-                type="reset"
-                class="btn btn-infrastructure-form transparent"
-              >
-                СБРОСИТЬ
-              </button>
-            </div>
+            <fieldset>
+              <legend class="form-header visually-hidden">Кнопки</legend>
+              <div class="btns-form">
+                <button type="submit" class="btn btn-infrastructure-form blue">
+                  ПРИМЕНИТЬ
+                </button>
+                <button
+                  type="reset"
+                  class="btn btn-infrastructure-form transparent"
+                >
+                  СБРОСИТЬ
+                </button>
+              </div>
+            </fieldset>
           </form>
         </div>
       </section>
@@ -272,17 +330,19 @@
               Только полезная информация и никакого спама,<br />
               честное бойскаутское!
             </p>
-            <label class="subscription-inputs"
-              ><input
-                type="email"
-                name="subscriber-email"
-                class="subscribe-input input-color"
-                placeholder="Ваш e-mail"
-              />
-              <button type="submit" class="btn btn-subscribe blue">
-                ПОДПИСАТЬСЯ
-              </button>
-            </label>
+            <form action="" method="post">
+              <label class="subscription-inputs"
+                ><input
+                  type="email"
+                  name="subscriber-email"
+                  class="field subscribe-input grey"
+                  placeholder="Ваш e-mail"
+                />
+                <button type="submit" class="btn btn-subscribe blue">
+                  ПОДПИСАТЬСЯ
+                </button>
+              </label>
+            </form>
           </article>
         </div>
       </section>
