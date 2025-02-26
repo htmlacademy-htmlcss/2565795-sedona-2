@@ -146,6 +146,7 @@ body {
   text-align: center;
   border-radius: 4px;
   color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 .btn-want-here {
   width: 160px;
@@ -242,7 +243,7 @@ body {
 /* WELCOME */
 
 .container-welcome-image {
-  background-image: url(/images/transparency.svg),
+  background-image: url(../images/transparency.svg),
     url(../images/mountains-background.jpg);
   background-color: aliceblue;
   background-repeat: no-repeat, no-repeat;
@@ -853,6 +854,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: block;
   width: 48px;
   height: 48px;
+  cursor: pointer;
 }
 .show-change-button:focus {
   border-color: rgba(0, 0, 0, 1);
