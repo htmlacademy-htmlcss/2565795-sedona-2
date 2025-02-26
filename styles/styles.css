@@ -91,7 +91,10 @@ body {
 .field:focus-visible {
   outline: 3px solid rgba(131, 179, 211, 1);
 }
-
+.field:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
 /* HEADER */
 .container-header {
   display: flex;
@@ -219,6 +222,7 @@ body {
 .brown:disabled,
 .green:disabled {
   background-color: rgba(229, 229, 229, 1);
+  pointer-events: none;
 }
 .home .nav-menu-link[href="index.html"]::after,
 .catalog .nav-menu-link[href="catalog.html"]::after {
@@ -844,11 +848,9 @@ input[type="number"]::-webkit-outer-spin-button {
   outline: none;
 }
 .filter-price-range:disabled {
-  opacity: 0.3;
+  pointer-events: none;
 }
-.filter-price-range:disabled + .filter-price-range-arrow-bottom svg path {
-  opacity: 0.3;
-}
+
 .filter-price-range-arrow-bottom {
   position: absolute;
   left: 264px;
@@ -1013,7 +1015,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .page a {
   margin: 0 auto;
-
   display: block;
   width: 100%;
   height: 100%;
