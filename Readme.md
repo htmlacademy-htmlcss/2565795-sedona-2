@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
-* Студент: [Олег Лебедев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2565795).
-* Наставник: `Неизвестно`.
+- Студент: [Олег Лебедев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2565795).
+- Наставник: [Евгения Подопригора](https://htmlacademy.ru/profile/id2387199).
+- Сайт: [Мой проект Сидона](https://kekcoleg69.github.io/2565795-sedona-2/).
 
 ---
 

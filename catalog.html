@@ -2,11 +2,11 @@
 <html lang="ru">
   <head>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="favicon.ico" />
-    <meta charset="utf-8" />
-    <title>Седона</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sedona catalog</title>
   </head>
-  <body class="home">
+  <body class="catalog">
     <header data-test="header">
       <div class="container-header">
         <a href="index.html" class="header-logo"
@@ -92,176 +92,314 @@
       </div>
     </header>
     <main data-test="main" class="main-container">
-      <section data-test="hero" id="welcome">
-        <h1 class="visually-hidden">Седона</h1>
-        <div class="container-welcome-image">
-          <img
-            src="images/welcome-sedona.svg"
-            width="458"
-            height="352"
-            alt="Добро пожаловать в Седону"
-          />
+      <section data-test="filter" id="filter-hotels">
+        <div class="container-filter-hotels">
+          <h1 class="catalog-header">Гостиницы Седоны</h1>
+          <div class="icons-breadcrumbs">
+            <a class="breadcrumbs-link link-home" href="index.html"></a>
+            <a class="breadcrumbs-link link-catalog" href="catalog.html"
+              >Гостиницы</a
+            >
+          </div>
+          <form
+            action="https://echo.htmlacademy.ru/"
+            method="get"
+            class="all-form"
+          >
+            <div class="form-left-wrapper">
+              <fieldset class="infrastructure-form">
+                <legend class="form-header">Инфраструктура:</legend>
+                <ul class="infrastructure-form-items">
+                  <li class="infrastructure-form-item">
+                    <label class="control">
+                      <input
+                        type="checkbox"
+                        name="pool"
+                        id="pool"
+                        class="visually-hidden control-input"
+                      />
+                      <span class="control-mark"></span>
+                      <span>Бассейн</span>
+                    </label>
+                  </li>
+                  <li class="infrastructure-form-item">
+                    <label class="control">
+                      <input
+                        type="checkbox"
+                        name="parking"
+                        id="parking"
+                        class="visually-hidden control-input"
+                      />
+                      <span class="control-mark"></span>
+                      <span>Парковка</span>
+                    </label>
+                  </li>
+                  <li class="infrastructure-form-item">
+                    <label class="control">
+                      <input
+                        type="checkbox"
+                        name="wifi"
+                        id="wifi"
+                        class="visually-hidden control-input"
+                      />
+                      <span class="control-mark"></span>
+                      <span>Wi-Fi</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="housing-form">
+                <legend class="form-header">Тип Жилья:</legend>
+                <ul class="housing-form-items">
+                  <li class="housing-form-item">
+                    <label class="control">
+                      <input
+                        type="radio"
+                        name="housing"
+                        id="hotel"
+                        value="hotel"
+                        class="visually-hidden control-input"
+                        checked
+                      />
+                      <span class="control-mark"></span>
+                      <span>Гостиница</span>
+                    </label>
+                  </li>
+                  <li class="housing-form-item">
+                    <label class="control">
+                      <input
+                        type="radio"
+                        name="housing"
+                        id="motel"
+                        value="motel"
+                        class="visually-hidden control-input"
+                      />
+                      <span class="control-mark"></span>
+                      <span>Мотель</span>
+                    </label>
+                  </li>
+                  <li class="housing-form-item">
+                    <label class="control">
+                      <input
+                        type="radio"
+                        name="housing"
+                        id="apartments"
+                        value="apartments"
+                        class="visually-hidden control-input"
+                      />
+                      <span class="control-mark"></span>
+                      <span>Апартаменты</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="form-right-wrapper">
+              <fieldset class="price-form">
+                <legend class="form-header">Стоимость, ₽:</legend>
+                <div class="range-inputs">
+                  <label class="range-input input-min">
+                    <input
+                      type="number"
+                      name="price-1"
+                      value="0"
+                      class="field price-form-input input-1"
+                    /><span>от</span></label
+                  >
+                  <label class="range-input input-max">
+                    <input
+                      type="number"
+                      name="price-2"
+                      value="9000"
+                      class="field price-form-input input-2"
+                    /><span>до</span></label
+                  >
+                </div>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 11px; width: 207px">
+                    <button
+                      type="button"
+                      class="range-toggle toggle-min"
+                    ></button>
+                    <button
+                      type="button"
+                      class="range-toggle toggle-max"
+                    ></button>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend class="form-header visually-hidden">Кнопки</legend>
+                <div class="btns-form">
+                  <button
+                    type="submit"
+                    class="btn btn-infrastructure-form blue"
+                  >
+                    ПРИМЕНИТЬ
+                  </button>
+                  <button
+                    type="reset"
+                    class="btn btn-infrastructure-form transparent"
+                  >
+                    СБРОСИТЬ
+                  </button>
+                </div>
+              </fieldset>
+            </div>
+          </form>
         </div>
       </section>
-      <section data-test="advantages" id="reasons_visit">
-        <h2 class="visually-hidden">Причины посетить Седону</h2>
-        <div class="container-acquaintance">
-          <h3 class="acquaintance-header">
-            Седона — небольшой городок в Аризоне, заслуживающий большего!
-          </h3>
-          <p class="acquaintance-text">
-            Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
-          </p>
+      <section data-test="catalog" id="result-search">
+        <h2 class="visually-hidden">Результаты поиска</h2>
+        <div class="container-filter-search">
+          <span class="search-header">Найдено гостиниц: 38</span>
+          <div class="filter-search-activity">
+            <select
+              name="filter-price"
+              id="filter-price"
+              class="filter-price-range"
+            >
+              <option>Сначала дешевые</option>
+              <option>Сначала дорогие</option>
+            </select>
+            <ul class="display-change-items">
+              <li class="display-change-item">
+                <button class="show-change-button button-1" autofocus></button>
+              </li>
+              <li class="display-change-item">
+                <button class="show-change-button button-2"></button>
+              </li>
+              <li class="display-change-item">
+                <button class="show-change-button button-3"></button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="container-sedona-info">
-          <ul class="list-reasons">
-            <li class="list-reason-item item-big">
-              <div class="reason-item-text-wrapper">
-                <h3 class="list-reason-header">Настоящий городок</h3>
-                <p class="list-reason-item-text">
-                  Седона — не аттракцион для туристов, там течёт своя жизнь
-                </p>
+        <div class="container-list-hotels">
+          <ul class="list-hotels">
+            <li class="hotel">
+              <a class="hotel-link" href="#"
+                ><img
+                  src="images/hotel-1.jpg"
+                  width="300"
+                  height="212"
+                  alt="Фото гостиницы"
+                />
+                <h3 class="title-hotel">Amara Resort & Spa</h3>
+              </a>
+              <span class="housing-class">Гостиница</span>
+              <span class="price">От 4000 ₽</span>
+              <button class="btn btn-hotel detail-btn brown">ПОДРОБНЕЕ</button>
+              <button class="btn btn-hotel add-favorite-btn blue">
+                В ИЗБРАННОЕ
+              </button>
+              <div class="stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
               </div>
-              <img
-                src="images/advantage-photo-1.jpg"
-                width="800"
-                height="385"
-                alt="Фотография города Седона"
-                class="list-reason-item-img"
-              />
+              <span class="rating">Рейтинг: 8,5</span>
             </li>
-            <li class="list-reason-item">
-              <h3 class="list-reason-header">Небольшая площадь</h3>
-              <p class="list-reason-item-text">
-                Все достопримечательности находятся очень близко
-              </p>
-            </li>
-            <li class="list-reason-item light">
-              <h3 class="list-reason-header">Красивая дорога</h3>
-              <p class="list-reason-item-text">
-                Ехать в Седону из Лас-Вегаса совсем не скучно!
-              </p>
-            </li>
-            <li class="list-reason-item">
-              <h3 class="list-reason-header">Мало туристов</h3>
-              <p class="list-reason-item-text">
-                Большинство едет в Гранд Каньон и толпится там
-              </p>
-            </li>
-            <li class="list-reason-item item-big">
-              <div class="reason-item-text-wrapper">
-                <h3 class="list-reason-header">
-                  Там есть <br />
-                  мост дьявола
-                </h3>
-                <p class="list-reason-item-text">
-                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
-                </p>
+            <li class="hotel">
+              <a class="hotel-link" href="#"
+                ><img
+                  src="images/hotel-2.jpg"
+                  width="300"
+                  height="212"
+                  alt="Фото гостиницы"
+                />
+                <h3 class="title-hotel">Villas at Poco Diablo</h3>
+              </a>
+              <span class="housing-class">Гостиница</span>
+              <span class="price">От 5000 ₽</span>
+              <button class="btn btn-hotel detail-btn brown">ПОДРОБНЕЕ</button>
+              <button class="btn btn-hotel add-favorite-btn green">
+                В ИЗБРАННОМ
+              </button>
+              <div class="stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
               </div>
-              <img
-                src="images/advantage-photo-2.jpg"
-                width="800"
-                height="385"
-                alt="Фотография города Седона"
-                class="list-reason-item-img"
-              />
+              <span class="rating">Рейтинг: 9,2</span>
+            </li>
+            <li class="hotel">
+              <a class="hotel-link" href="#"
+                ><img
+                  src="images/hotel-3.jpg"
+                  width="300"
+                  height="212"
+                  alt="Фото гостиницы"
+                />
+                <h3 class="title-hotel">Desert Quail Inn</h3>
+              </a>
+              <span class="housing-class">Гостиница</span>
+              <span class="price">От 2500 ₽</span>
+              <button class="btn btn-hotel detail-btn brown">ПОДРОБНЕЕ</button>
+              <button class="btn btn-hotel add-favorite-btn blue">
+                В ИЗБРАННОЕ
+              </button>
+              <div class="stars">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <span class="rating">Рейтинг: 6,9</span>
+            </li>
+            <li class="hotel">
+              <a class="hotel-link" href="#"
+                ><img
+                  src="images/hotel-4.jpg"
+                  width="300"
+                  height="212"
+                  alt="Фото гостиницы"
+                />
+                <h3 class="title-hotel">GreenTree Inn</h3>
+              </a>
+              <span class="housing-class">Гостиница</span>
+              <span class="price">От 1500 ₽</span>
+              <button class="btn btn-hotel detail-btn brown">ПОДРОБНЕЕ</button>
+              <button class="btn btn-hotel add-favorite-btn blue">
+                В ИЗБРАННОЕ
+              </button>
+              <div class="stars">
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <span class="rating">Рейтинг: 5,0</span>
             </li>
           </ul>
         </div>
+        <ul class="pages-list">
+          <li class="page page-1"><span>1</span></li>
+          <li class="page page-2"><a href="#">2</a></li>
+          <li class="page page-3"><a href="#">3</a></li>
+          <li class="page page-4"><a href="#">4</a></li>
+          <li class="page page-5"><span>...</span></li>
+          <li class="page page-6"><a href="#">10</a></li>
+        </ul>
       </section>
-      <section data-test="service" id="advice">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <div class="invite-container">
-          <h3 class="invite-header">
-            Приезжайте в Седону отдохнуть в комфорте и уюте!
-          </h3>
-          <p class="invite-text">
-            Опытный персонал и качественное обслуживание!
-          </p>
-        </div>
-        <div class="container-advice">
-          <ul class="advice-list">
-            <li class="advice-item light housing">
-              <img
-                src="images/home.svg"
-                width="75"
-                height="72"
-                alt="логотип дома"
-              />
-              <h3 class="advice-item-header">Жильё</h3>
-              <p class="advice-item-text">
-                Рекомендуем пожить<br />
-                в настоящем мотеле,<br />
-                всё как в кино!
-              </p>
-            </li>
-            <li class="advice-item food">
-              <img
-                src="images/food.svg"
-                width="74"
-                height="70"
-                alt="логотип еды"
-              />
-              <h3 class="advice-item-header">Еда</h3>
-              <p class="advice-item-text">
-                Всегда заказывайте<br />
-                топовый фирменный бургер,<br />
-                вы не разочаруетесь!
-              </p>
-            </li>
-            <li class="advice-item light souvenir">
-              <img
-                src="images/souvenir.svg"
-                width="64"
-                height="76"
-                alt="логотип сувенира"
-              />
-              <h3 class="advice-item-header">Сувениры</h3>
-              <p class="advice-item-text">
-                Не только китайского,<br />
-                но и настоящего местного<br />
-                производства!
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section data-test="search" class="hotel-search">
-        <div class="container-hotel-search">
-          <h2 class="hotel-search-header">Заинтересовались?</h2>
-          <p class="hotel-search-text">
-            Укажите предполагаемые даты поездки,<br />
-            и мы покажем вам лучшие предложения гостиниц в Седоне
-          </p>
-          <button class="btn btn-search-hotel brown">
-            ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
-          </button>
-        </div>
-      </section>
-      <section id="footer-subscription">
-        <div class="container-footer-subscription">
+      <section data-test="subscribe" id="footer-subscription">
+        <div class="container-footer-subscription background-white">
           <article class="subscription-article">
             <h2 class="subscription-header">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
             <p class="subscription-text">
               Только полезная информация и никакого спама,<br />
               честное бойскаутское!
             </p>
-            <form action="#" method="post">
+            <form action=" https://echo.htmlacademy.ru." method="post">
               <div class="subscribe-inputs-wrapper">
-                <label class="subscription-email-input" for="subscribe-input">
-                </label
+                <label class="subscription-inputs" for="subscribe-input"></label
                 ><input
                   type="email"
                   name="subscriber-email"
                   id="subscribe-input"
-                  class="field subscribe-input"
+                  class="field subscribe-input grey"
                   placeholder="Ваш e-mail"
                 />
-                <button
-                  type="submit"
-                  class="btn btn-subscribe blue"
-                  value="ПОДПИСАТЬСЯ"
-                >
+                <button type="submit" class="btn btn-subscribe blue">
                   ПОДПИСАТЬСЯ
                 </button>
               </div>
@@ -396,179 +534,5 @@
         </div>
       </section>
     </footer>
-    <div data-test="modal" class="modal-container visually-hidden">
-      <div class="modal modal-hotel-search">
-        <h2 class="modal-content-title">Поиск гостиницы в Седоне</h2>
-        <button class="modal-close-button"></button>
-        <section class="modal-content">
-          <form
-            class="modal-hotel-search-form"
-            action=" https://echo.htmlacademy.ru."
-            method="get"
-          >
-            <div class="modal-hotel-search-form-wrapper">
-              <fieldset class="modal-hotel-search-form-items">
-                <label class="modal-hotel-search-form-item">
-                  <span class="modal-hotel-search-form-item-title"
-                    >Дата Заезда:</span
-                  >
-                  <input
-                    type="text"
-                    value="27 апреля 2020"
-                    class="field modal-hotel-search-form-input"
-                  />
-                  <span class="modal-hotel-search-form-item-calendar"></span>
-                  <span
-                    class="modal-hotel-search-form-item-message message-error"
-                    >Мы не можем отправить вас в прошлое.</span
-                  >
-                </label>
-                <label class="modal-hotel-search-form-item">
-                  <span class="modal-hotel-search-form-item-title"
-                    >Дата Выезда:</span
-                  >
-                  <input
-                    type="text"
-                    value="1 сентября 2023"
-                    class="field modal-hotel-search-form-input"
-                  />
-                  <span class="modal-hotel-search-form-item-calendar"></span>
-                  <span
-                    class="modal-hotel-search-form-item-message message-free-dates"
-                    >На эти даты есть свободные номера. Пока есть.</span
-                  >
-                </label>
-              </fieldset>
-              <fieldset class="modal-hotel-search-form-age-inputs">
-                <div class="modal-hotel-search-form-age-input">
-                  <label for="adults" class="modal-hotel-search-form-label"
-                    >Взрослые:</label
-                  >
-                  <div class="wrapper-input-button">
-                    <button
-                      class="button-modal-hotel-search button-minus"
-                      type="button"
-                    >
-                      <svg
-                        class="button-modal-hotel-search-icon"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-label="минус"
-                      >
-                        <path
-                          d="M3 9V11H17V9H3Z"
-                          fill="#756157"
-                          fill-opacity="0.3"
-                        />
-                      </svg>
-                    </button>
-                    <input id="adults" type="number" value="2" />
-
-                    <button
-                      class="button-modal-hotel-search button-plus"
-                      type="button"
-                    >
-                      <svg
-                        class="button-modal-hotel-search-icon"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-label="плюс"
-                      >
-                        <path
-                          d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
-                          fill="#756157"
-                          fill-opacity="0.3"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="modal-hotel-search-form-age-input">
-                  <div class="wrapper-span-tooltip">
-                    <label for="children">Дети:</label>
-                    <div class="tooltip">
-                      <button class="button-tooltip" type="button">
-                        <svg
-                          class="tooltip-icon"
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          aria-label="информация при наведении"
-                        >
-                          <circle cx="13" cy="13" r="13" fill="#83B3D3" />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </button>
-                      <p class="tooltip-text">
-                        Укажите количество детей, которые будут с вами, возраст
-                        которых от 6 до 18 лет. Дети до 6 лет размещаются
-                        бесплатно.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="wrapper-input-button">
-                    <button
-                      class="button-modal-hotel-search button-minus"
-                      type="button"
-                    >
-                      <svg
-                        class="button-modal-hotel-search-icon"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-label="минус"
-                      >
-                        <path
-                          d="M3 9V11H17V9H3Z"
-                          fill="#756157"
-                          fill-opacity="0.3"
-                        />
-                      </svg>
-                    </button>
-                    <input id="children" type="number" value="2" />
-                    <button
-                      class="button-modal-hotel-search button-plus"
-                      type="button"
-                    >
-                      <svg
-                        class="button-modal-hotel-search-icon"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-label="плюс"
-                      >
-                        <path
-                          d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
-                          fill="#756157"
-                          fill-opacity="0.3"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </fieldset>
-              <button class="button-search" type="submit">Найти</button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </div>
   </body>
 </html>
