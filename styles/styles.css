@@ -23,14 +23,13 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-ul {
+.list {
   list-style: none;
 }
 ul,
 h1,
 h2,
 h3,
-img,
 li,
 a,
 button,
@@ -46,15 +45,21 @@ section {
   margin: 0;
   padding: 0;
 }
-input,
 select,
 a {
   font-family: inherit;
   font-weight: inherit;
   color: inherit;
 }
-img {
+.field {
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+.picture {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 html {
   background-color: rgba(242, 242, 242, 1);
@@ -325,7 +330,7 @@ body {
   padding: 0;
   background-color: rgba(130, 179, 211, 1);
 }
-.item-big > .reason-item-text-wrapper > .list-reason-header::after {
+.reason-item-text-wrapper > .list-reason-header::after {
   position: absolute;
   content: "";
   width: 60px;
@@ -346,7 +351,7 @@ body {
   transform: translatex(-50%);
 }
 
-.list-reasons > li:nth-child(5) > img {
+li:nth-child(5) > img {
   order: -1;
 }
 .reason-item-text-wrapper {
@@ -517,17 +522,17 @@ body {
   width: 40px;
   height: 40px;
 }
-.icon-vk:hover svg path,
-.icon-vk:focus-visible svg path,
-.icon-telegram:hover svg path,
-.icon-telegram:focus-visible svg path,
-.icon-youtube:hover svg path,
-.icon-youtube:focus-visible svg path {
+.icon-vk:hover .vk-path,
+.icon-vk:focus-visible .vk-path,
+.icon-telegram:hover .telegram-path,
+.icon-telegram:focus-visible .telegram-path,
+.icon-youtube:hover .youtube-path,
+.icon-youtube:focus-visible .youtube-path {
   fill: rgba(104, 162, 202, 1);
 }
-.icon-vk:active svg path,
-.icon-telegram:active svg path,
-.icon-youtube:active svg path {
+.icon-vk:active .vk-path,
+.icon-telegram:active .telegram-path,
+.icon-youtube:active .youtube-path {
   fill: rgba(104, 162, 202, 0.3);
 }
 .footer-number {
@@ -544,11 +549,11 @@ body {
 .footer-number:active {
   color: rgba(117, 97, 87, 0.3);
 }
-.icon-htmlacademy:hover svg path,
-.icon-htmlacademy:focus-visible svg path {
+.icon-htmlacademy:hover .html-academy-path,
+.icon-htmlacademy:focus-visible .html-academy-path {
   fill: rgba(117, 97, 87, 1);
 }
-.icon-htmlacademy:active svg path {
+.icon-htmlacademy:active .html-academy-path {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -1184,7 +1189,7 @@ input[type="number"] {
   background-color: transparent;
   border: none;
 }
-.button-modal-hotel-search:hover svg path {
+.button-modal-hotel-search:hover .button-modal-hotel-search-path {
   fill: rgba(0, 0, 0, 1);
   fill-opacity: 1;
 }
