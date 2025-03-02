@@ -971,6 +971,7 @@ input[type="number"] {
 
 .detail-btn {
   grid-area: detail;
+  text-transform: uppercase;
 }
 .add-favorite-btn {
   padding: 8px 20px;
