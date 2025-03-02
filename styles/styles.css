@@ -28,7 +28,6 @@
   margin: 0;
   padding: 0;
 }
-h1,
 h2,
 h3,
 li,
@@ -38,7 +37,6 @@ span,
 section,
 p,
 div,
-fieldset,
 input,
 label,
 form,
@@ -46,7 +44,13 @@ section {
   margin: 0;
   padding: 0;
 }
-
+a {
+  color: inherit;
+}
+.form-group {
+  margin: 0;
+  padding: 0;
+}
 .field {
   font-family: inherit;
   font-weight: inherit;
@@ -568,6 +572,8 @@ fieldset {
   padding: 35px 70px 57px;
 }
 .catalog-header {
+  margin: 0;
+  padding: 0;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
