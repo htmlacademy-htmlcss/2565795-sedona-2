@@ -50,11 +50,12 @@ a {
 .form-group {
   margin: 0;
   padding: 0;
+  border: none;
 }
 .field {
   font-family: inherit;
   font-weight: inherit;
-  color: inherit;
+  color: black;
 }
 .picture {
   display: block;
@@ -560,10 +561,6 @@ li:nth-child(5) > img {
 /* CATALOG PAGE */
 
 /* FILTER-HOTELS */
-
-fieldset {
-  border: none;
-}
 
 .container-filter-hotels {
   color: rgba(255, 255, 255, 1);
