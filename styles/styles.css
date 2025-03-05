@@ -248,7 +248,7 @@ body {
 .container-welcome-image {
   background-image: url(../images/transparency.svg),
     url(../images/mountains-background.jpg);
-  background-color: aliceblue;
+  background-color: rgba(131, 179, 211, 0.2);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, center;
   height: 485px;
@@ -453,7 +453,7 @@ li:nth-child(5) > img {
 
 .container-footer-subscription {
   text-align: center;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(131, 179, 211, 0.2);
   color: white;
   background-image: url(../images/background-subscribe.jpg);
   background-size: cover;
@@ -566,7 +566,8 @@ li:nth-child(5) > img {
 
 .container-filter-hotels {
   color: rgba(255, 255, 255, 1);
-  background: black url(../images/background-filter.png) no-repeat;
+  background: rgba(131, 179, 211, 0.2) url(../images/background-filter.png)
+    no-repeat;
   background-size: cover;
   padding: 35px 70px 57px;
 }
@@ -1149,13 +1150,26 @@ input[type="number"] {
   flex-direction: column;
 }
 .modal-hotel-search-form-item {
+  /* position: relative; */
+
+  /* align-items: center;
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 48px;
+  gap: 18px; */
+  display: flex;
+  flex-direction: column;
+}
+.modal-hotel-search-form-item-wrapper {
   position: relative;
 
   align-items: center;
   justify-content: space-between;
   display: flex;
-  margin-bottom: 48px;
   gap: 18px;
+}
+.modal-hotel-search-form-item-title {
+  max-width: 119px;
 }
 .modal-hotel-search-form-item-title,
 .modal-hotel-search-form-age-input {
@@ -1277,6 +1291,7 @@ input[type="number"] {
   font-weight: 700;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
+  cursor: pointer;
 }
 .button-modal-hotel-search-icon {
   display: flex;
@@ -1306,13 +1321,9 @@ input[type="number"] {
   font-weight: 700;
 }
 .modal-hotel-search-form-item-message {
-  position: absolute;
-  bottom: -24px;
-  left: 137px;
   font-size: 16px;
   line-height: 21px;
-  width: 440px;
-  padding: 0 20px;
+  margin-left: 158px;
 }
 .message-error {
   color: rgba(255, 87, 87, 1);

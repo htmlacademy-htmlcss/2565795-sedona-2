@@ -88,7 +88,9 @@
             <a href="#" class="reference links-icon icon-favorites"></a>
           </li>
           <li>
-            <button class="btn btn-want-here brown">ХОЧУ СЮДА!</button>
+            <button type="button" class="btn btn-want-here brown">
+              ХОЧУ СЮДА!
+            </button>
           </li>
         </ul>
       </div>
@@ -239,7 +241,7 @@
             Укажите предполагаемые даты поездки,<br />
             и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <button class="btn btn-search-hotel brown">
+          <button type="button" class="btn btn-search-hotel brown">
             ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
           </button>
         </div>
@@ -429,7 +431,7 @@
     <div data-test="modal" class="modal-container visually-hidden">
       <div class="modal modal-hotel-search">
         <h2 class="modal-content-title">Поиск гостиницы в Седоне</h2>
-        <button class="modal-close-button"></button>
+        <button type="button" class="modal-close-button"></button>
         <section class="modal-content">
           <form
             class="modal-hotel-search-form"
@@ -437,39 +439,43 @@
             method="get"
           >
             <div class="modal-hotel-search-form-wrapper">
-              <fieldset class="modal-hotel-search-form-items">
+              <fieldset class="form-group modal-hotel-search-form-items">
                 <label class="modal-hotel-search-form-item">
-                  <span class="modal-hotel-search-form-item-title"
-                    >Дата Заезда:</span
-                  >
-                  <input
-                    type="text"
-                    value="27 апреля 2020"
-                    class="field modal-hotel-search-form-input"
-                  />
-                  <span class="modal-hotel-search-form-item-calendar"></span>
+                  <div class="modal-hotel-search-form-item-wrapper">
+                    <span class="modal-hotel-search-form-item-title"
+                      >Дата Заезда:</span
+                    >
+                    <input
+                      type="text"
+                      value="27 апреля 2020"
+                      class="field modal-hotel-search-form-input"
+                    />
+                    <span class="modal-hotel-search-form-item-calendar"></span>
+                  </div>
                   <span
                     class="modal-hotel-search-form-item-message message-error"
                     >Мы не можем отправить вас в прошлое.</span
                   >
                 </label>
                 <label class="modal-hotel-search-form-item">
-                  <span class="modal-hotel-search-form-item-title"
-                    >Дата Выезда:</span
-                  >
-                  <input
-                    type="text"
-                    value="1 сентября 2023"
-                    class="field modal-hotel-search-form-input"
-                  />
-                  <span class="modal-hotel-search-form-item-calendar"></span>
+                  <div class="modal-hotel-search-form-item-wrapper">
+                    <span class="modal-hotel-search-form-item-title"
+                      >Дата Выезда:</span
+                    >
+                    <input
+                      type="text"
+                      value="1 сентября 2023"
+                      class="field modal-hotel-search-form-input"
+                    />
+                    <span class="modal-hotel-search-form-item-calendar"></span>
+                  </div>
                   <span
                     class="modal-hotel-search-form-item-message message-free-dates"
                     >На эти даты есть свободные номера. Пока есть.</span
                   >
                 </label>
               </fieldset>
-              <fieldset class="modal-hotel-search-form-age-inputs">
+              <fieldset class="form-group modal-hotel-search-form-age-inputs">
                 <div class="modal-hotel-search-form-age-input">
                   <label for="adults" class="modal-hotel-search-form-label"
                     >Взрослые:</label
