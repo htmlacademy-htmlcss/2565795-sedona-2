@@ -428,7 +428,7 @@
         </div>
       </section>
     </footer>
-    <div data-test="modal" class="modal-container visually-hidden">
+    <div data-test="modal" class="modal-container">
       <div class="modal modal-hotel-search">
         <h2 class="modal-content-title">Поиск гостиницы в Седоне</h2>
         <button type="button" class="modal-close-button"></button>
@@ -440,12 +440,15 @@
           >
             <div class="modal-hotel-search-form-wrapper">
               <fieldset class="form-group modal-hotel-search-form-items">
-                <label class="modal-hotel-search-form-item">
+                <div class="modal-hotel-search-form-item">
                   <div class="modal-hotel-search-form-item-wrapper">
-                    <span class="modal-hotel-search-form-item-title"
-                      >Дата Заезда:</span
+                    <label
+                      for="arrival-date"
+                      class="modal-hotel-search-form-item-title"
+                      >Дата Заезда:</label
                     >
                     <input
+                      id="arrival-date"
                       type="text"
                       value="27 апреля 2020"
                       class="field modal-hotel-search-form-input"
@@ -456,13 +459,16 @@
                     class="modal-hotel-search-form-item-message message-error"
                     >Мы не можем отправить вас в прошлое.</span
                   >
-                </label>
-                <label class="modal-hotel-search-form-item">
+                </div>
+                <div class="modal-hotel-search-form-item">
                   <div class="modal-hotel-search-form-item-wrapper">
-                    <span class="modal-hotel-search-form-item-title"
-                      >Дата Выезда:</span
+                    <label
+                      for="departure-date"
+                      class="modal-hotel-search-form-item-title"
+                      >Дата Выезда:</label
                     >
                     <input
+                      id="departure-date"
                       type="text"
                       value="1 сентября 2023"
                       class="field modal-hotel-search-form-input"
@@ -473,7 +479,7 @@
                     class="modal-hotel-search-form-item-message message-free-dates"
                     >На эти даты есть свободные номера. Пока есть.</span
                   >
-                </label>
+                </div>
               </fieldset>
               <fieldset class="form-group modal-hotel-search-form-age-inputs">
                 <div class="modal-hotel-search-form-age-input">
@@ -604,7 +610,7 @@
                   </div>
                 </div>
               </fieldset>
-              <button class="button-search" type="submit">Найти</button>
+              <button class="button-search blue" type="submit">Найти</button>
             </div>
           </form>
         </section>
