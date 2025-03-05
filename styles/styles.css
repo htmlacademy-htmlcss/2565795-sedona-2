@@ -1148,15 +1148,10 @@ input[type="number"] {
 .modal-hotel-search-form-items {
   display: flex;
   flex-direction: column;
+  row-gap: 23px;
+  margin-bottom: 23px;
 }
 .modal-hotel-search-form-item {
-  /* position: relative; */
-
-  /* align-items: center;
-  justify-content: space-between;
-  display: flex;
-  margin-bottom: 48px;
-  gap: 18px; */
   display: flex;
   flex-direction: column;
 }
@@ -1293,6 +1288,7 @@ input[type="number"] {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .button-modal-hotel-search-icon {
   display: flex;
 }
