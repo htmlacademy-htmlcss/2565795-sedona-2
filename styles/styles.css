@@ -1298,7 +1298,7 @@ input[type="number"] {
   height: 20px;
   right: 14px;
   top: 50%;
-  background-image: url(/images/calendar.svg);
+  background-image: url(../images/calendar.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
