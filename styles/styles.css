@@ -99,9 +99,6 @@ body {
   padding-left: 70px;
   padding-right: 70px;
 }
-.catalog .container-header{
-  padding-top:3px;
-}
 .nav-menu-header {
   display: flex;
 }
@@ -149,6 +146,10 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+.other-link:hover,
+.nav-menu-link-item:hover{
+  background-color:aliceblue
 }
 .btn {
   display: inline-block;
@@ -218,8 +219,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 .transparent:focus-visible {
-  border: 3px solid rgba(131, 179, 211, 1);
-  outline: rgba(104, 162, 202, 1);
+  outline:3px solid rgba(131, 179, 211, 1);
 }
 .transparent:active {
   color: rgba(255, 255, 255, 0.3);
@@ -510,7 +510,7 @@ li:nth-child(5) > img {
 }
 .subscription-header {
   margin: 0;
-  padding: 0;
+  padding: 0 150px;
   font-size: 30px;
   line-height: 36px;
   margin-bottom: 20px;
@@ -524,6 +524,7 @@ li:nth-child(5) > img {
 .subscribe-inputs-wrapper {
   display: flex;
   justify-content: center;
+  padding: 0 150px;
 }
 
 .subscribe-input {
@@ -543,6 +544,9 @@ li:nth-child(5) > img {
   border-radius: 0;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* FOOTER */
