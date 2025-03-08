@@ -113,18 +113,16 @@ body {
   width: 507px;
 }
 .nav-menu-link {
-  /* position: relative; */
+  position: relative;
   display: inline-block;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
-  padding: 20px 16px;
   color: rgba(0, 0, 0, 1);
 }
-.link-text{
-  position: relative;
-  display: inline-block;
+.nav-menu-link-item {
+  padding: 20px 16px;
 }
 
 .others-links-header {
@@ -221,22 +219,20 @@ body {
   background-color: rgba(229, 229, 229, 1);
   pointer-events: none;
 }
-.home .nav-menu-link[href="index.html"] .link-text::after,
-.catalog .nav-menu-link[href="catalog.html"] .link-text::after {
+.home .nav-menu-link[href="index.html"]::after,
+.catalog .nav-menu-link[href="catalog.html"]::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -21px;
-  height: 2px;
+  bottom: -22px;
+  height: 3px;
   background-color: rgba(117, 98, 87, 1);
-  width: 100%
 }
 .links-icon {
   display: block;
-  background-size: 20px 20px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position:center;
   width: 44px;
   height: 64px;
 }
@@ -246,27 +242,13 @@ body {
 .icon-favorites {
   background-image: url(../images/favorites.svg);
 }
-.favorite-item{
-  position: relative;
-}
-.number-favorites{
-  position: absolute;
-  font-size: 10px;line-height: 10px;
-  padding: 5px;
-  border-radius: 50%;
-  color:rgba(255, 255, 255, 1);
-  top:12px;
-  right:3px;
-  background-color:rgba(125, 181, 79, 1);
-  cursor: pointer;
-}
 
 /* WELCOME */
 
 .container-welcome-image {
   background-image: url(../images/transparency.svg),
     url(../images/mountains-background.jpg);
-  background-color: rgba(131, 179, 211, 0.8);
+  background-color: rgba(131, 179, 211, 0.2);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, center;
   height: 485px;
@@ -420,26 +402,10 @@ li:nth-child(5) > img {
 }
 .advice-item {
   width: 230px;
-  padding: 161px 85px 81px;
+  padding: 81px 85px;
   color: rgba(51, 51, 51, 1);
   font-size: 18px;
   line-height: 21px;
-  background-repeat:no-repeat;
-}
-.housing{
-  background-image:url(../images/home.svg);
-  background-size: 75px 72px;
-  background-position: center 81px;
-}
-.food{
-  background-image:url(../images/food.svg);
-  background-size: 74px 70px;
-  background-position: center 82px;
-}
-.souvenir{
-  background-image:url(../images/souvenir.svg);
-  background-size: 64px 76px;
-  background-position: center 79px;
 }
 .advice-item-header {
   text-transform: uppercase;
@@ -455,7 +421,9 @@ li:nth-child(5) > img {
   margin: 0 auto;
   margin-bottom: 30px;
 }
-
+.souvenir {
+  padding-top: 75px;
+}
 /* HOTEL-SEARCH */
 .container-hotel-search {
   padding-top: 96px;
@@ -485,7 +453,7 @@ li:nth-child(5) > img {
 
 .container-footer-subscription {
   text-align: center;
-  background-color: rgba(131, 179, 211, 0.8);
+  background-color: rgba(131, 179, 211, 0.2);
   color: white;
   background-image: url(../images/background-subscribe.jpg);
   background-size: cover;
@@ -598,10 +566,10 @@ li:nth-child(5) > img {
 
 .container-filter-hotels {
   color: rgba(255, 255, 255, 1);
-  background: rgba(131, 179, 211, 0.8) url(../images/background-filter.png)
+  background: rgba(131, 179, 211, 0.2) url(../images/background-filter.png)
     no-repeat;
   background-size: cover;
-  padding: 37px 70px 57px;
+  padding: 35px 70px 57px;
 }
 .catalog-header {
   margin: 0;
@@ -609,14 +577,15 @@ li:nth-child(5) > img {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 .icons-breadcrumbs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 18px;
-  margin-bottom: 30px;
+  gap: 28px;
+  margin-bottom: 40px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -629,19 +598,16 @@ li:nth-child(5) > img {
 
 .link-home {
   background-repeat: no-repeat;
-  background-position: left;
-  background-size: 13px 15px;
+  background-size: cover;
+  background-position: center;
   width: 13px;
   height: 15px;
-  padding-right: 10px;
   background-image: url(../images/icons-home.svg);
-  padding: 10px 10px 10px 0;
 }
 .link-catalog {
   position: relative;
   display: inline-block;
   color: rgba(255, 255, 255, 1);
-  padding: 10px 10px 10px 0;
 }
 .breadcrumbs-link:hover {
   color: rgba(255, 255, 255, 0.6);
@@ -659,7 +625,7 @@ li:nth-child(5) > img {
   width: 8px;
   left: -14px;
   transform: translateX(-50%);
-  top: 10px;
+  top: 2px;
 }
 .all-form {
   display: flex;
@@ -1332,7 +1298,7 @@ input[type="number"] {
   height: 20px;
   right: 14px;
   top: 50%;
-  background-image: url(/images/calendar.svg);
+  background-image: url(../images/calendar.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
