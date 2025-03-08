@@ -258,6 +258,7 @@ body {
   top:12px;
   right:3px;
   background-color:rgba(125, 181, 79, 1);
+  cursor: pointer;
 }
 
 /* WELCOME */
