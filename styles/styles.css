@@ -151,6 +151,10 @@ body {
 .nav-menu-link-item:hover{
   background-color:aliceblue
 }
+.other-link:active,
+.nav-menu-link-item:active{
+  opacity: 0.3;
+}
 .btn {
   display: inline-block;
   font-family: inherit;
